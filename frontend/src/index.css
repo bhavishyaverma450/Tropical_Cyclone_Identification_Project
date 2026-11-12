@@ -1,0 +1,185 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent-cyan: #00f2fe;
+    --accent-blue: #3b82f6;
+  }
+
+  body {
+    @apply m-0 p-0 overflow-x-hidden min-h-screen;
+    background-color: #050811;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.18) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.10) 0px, transparent 50%);
+  }
+}
+
+@layer components {
+  /* Glassmorphism Cards */
+  .glass-panel {
+    background: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.50), inset 0 1px 0 rgba(255,255,255,0.05);
+    border-radius: 16px;
+  }
+
+  .glass-panel-glow {
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(0, 242, 254, 0.40);
+    box-shadow: 0 0 35px rgba(0, 242, 254, 0.22), 0 8px 32px rgba(0,0,0,0.4);
+    border-radius: 16px;
+  }
+
+  .glass-nav {
+    background: rgba(5, 8, 17, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.22);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  }
+
+  .stat-card {
+    @apply rounded-xl p-4 border;
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(56, 189, 248, 0.15);
+  }
+
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 rounded-xl font-bold text-sm transition-all;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+  }
+
+  .btn-primary:hover {
+    @apply scale-105;
+    box-shadow: 0 6px 28px rgba(14, 165, 233, 0.45);
+  }
+
+  .btn-primary:disabled {
+    @apply opacity-50 scale-100 cursor-not-allowed;
+  }
+
+  .nav-tab {
+    @apply flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all whitespace-nowrap border border-transparent;
+    color: #94a3b8;
+  }
+
+  .nav-tab:hover {
+    color: #e2e8f0;
+    background: rgba(30, 41, 59, 0.5);
+  }
+
+  .nav-tab.active {
+    color: #67e8f9;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.18), rgba(99, 102, 241, 0.12));
+    border-color: rgba(14, 165, 233, 0.35);
+    box-shadow: 0 2px 12px rgba(14, 165, 233, 0.15);
+  }
+
+  .tag-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+
+  .glow-text-cyan {
+    background: linear-gradient(90deg, #00f2fe, #4fc3f7, #a5f3fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-text-white {
+    background: linear-gradient(90deg, #f8fafc, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #050811; }
+  ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Leaflet Dark Map */
+  .leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+    background: #070b14 !important;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: rgba(10, 15, 29, 0.97) !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 10px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+  }
+
+  .leaflet-popup-tip { background: rgba(10, 15, 29, 0.97) !important; }
+
+  .leaflet-control-zoom a {
+    background: rgba(15, 23, 42, 0.9) !important;
+    color: #94a3b8 !important;
+    border-color: rgba(56, 189, 248, 0.2) !important;
+  }
+
+  .leaflet-control-zoom a:hover {
+    background: rgba(56, 189, 248, 0.15) !important;
+    color: #67e8f9 !important;
+  }
+
+  .leaflet-control-attribution {
+    background: rgba(5, 8, 17, 0.7) !important;
+    color: #475569 !important;
+  }
+
+  /* Animations */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes sweep {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes float-up {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+  .animate-spin-slow { animation: spin-slow 8s linear infinite; }
+  .animate-sweep { animation: sweep 4s linear infinite; }
+  .animate-float { animation: float-up 4s ease-in-out infinite; }
+
+  .gradient-border {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+}
