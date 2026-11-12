@@ -1,31 +1,102 @@
-<<<<<<< HEAD
-# Tropical Cyclone Intelligence (TCI)
+# 🌪️ Tropical Cyclone Identification Project
 
-An AI/ML-Based Multi-Source Satellite Framework for Cyclone Identification, Classification and Prediction.
+## 📌 Overview
 
-## System Architecture
+The **Tropical Cyclone Identification Project** focuses on identifying tropical cyclones using data-driven techniques and machine learning approaches. The project aims to analyze relevant meteorological data, identify patterns associated with tropical cyclones, and support the understanding of cyclone-related weather conditions.
 
-The system consists of two primary components:
-1. **Python FastAPI AI/ML Backend (`/backend`)**:
-   - **Data Preprocessing & Data Integration**: Multi-spectral imagery loaders (Infrared IR, Water Vapor WV, Passive Microwave MW, Visible VIS) and IBTrACS best track alignment.
-   - **Cyclone Spatial Localizer & Identification Engine**: CNN vortex detector for cyclone presence and eye coordinates.
-   - **Intensity Pattern Classifier**: Deep learning model classifying 7 IMD categories (Depression to Super Cyclonic Storm) and calculating wind speed (kts), central pressure (hPa), and Dvorak T-numbers.
-   - **Spatiotemporal Forecast Engine**: ConvLSTM sequence model for 6h to 48h track movement and intensity trends.
-   - **Evaluation & Benchmarks Suite**: Calculates confusion matrices, ROC-AUC, MAE, and RMSE across datasets (TCIR, INCYDE, Himawari-8, IBTrACS).
+## 🎯 Objectives
 
-2. **React + Vite Modern GIS Dashboard (`/frontend`)**:
-   - Interactive GIS satellite map viewer with storm tracks, eye markers, and forecast cones.
-   - Real-time satellite image upload & instant AI inference visualizer.
-   - Recharts temporal forecast graphs for wind speed and pressure.
-   - Model metrics & cross-sensor benchmark tables.
-   - Research dataset hub & formal meteorological warning bulletin exporter.
+- Analyze meteorological data related to tropical cyclones.
+- Identify important features associated with cyclone formation and intensity.
+- Apply data preprocessing and analysis techniques.
+- Develop a data-driven approach for tropical cyclone identification.
+- Evaluate the performance of the implemented approach.
 
-## Quick Start Launcher
+## 🛠️ Technologies Used
 
-To run the entire system:
-1. Open `d:\Capstone\Project`.
-2. Double-click `run_app.bat`.
-3. Open browser at `http://localhost:5173`.
-=======
-# Tropical_Cyclone_Identification_Project
->>>>>>> c2825ea88cee81e5a49d816527a1a076250c33d7
+- **Programming Language:** Python
+- **Data Analysis:** Pandas, NumPy
+- **Data Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** [Add the algorithms used]
+- **Development Environment:** Jupyter Notebook / Google Colab
+
+*Update this section according to the libraries and tools actually used in the project.*
+
+## 📂 Project Structure
+
+```text
+Tropical_Cyclone_Identification_Project/
+│
+├── Dataset/
+│   └── dataset files
+│
+├── Notebooks/
+│   └── project_notebook.ipynb
+│
+├── src/
+│   └── source_code.py
+│
+├── extracted_first_pdf.txt
+├── README.md
+└── requirements.txt
+```
+
+*Modify the structure to match your actual repository.*
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/bhavishyaverma450/Tropical_Cyclone_Identification_Project.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd Tropical_Cyclone_Identification_Project
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the project
+
+Open the Jupyter Notebook or Python source files and execute the cells or scripts in the appropriate order.
+
+## 📊 Project Workflow
+
+1. Data Collection
+2. Data Preprocessing
+3. Exploratory Data Analysis (EDA)
+4. Feature Selection and Engineering
+5. Model Development
+6. Model Evaluation
+7. Result Analysis
+
+## 📈 Expected Outcomes
+
+- Better understanding of tropical cyclone-related meteorological patterns.
+- Identification of relevant features for cyclone analysis.
+- Data-driven insights into tropical cyclone identification.
+- Evaluation of the effectiveness of the implemented methodology.
+
+## 🚀 Future Scope
+
+- Incorporating real-time meteorological data.
+- Exploring advanced machine learning and deep learning techniques.
+- Improving identification accuracy.
+- Developing an interactive visualization dashboard.
+
+## 👨‍💻 Contributors
+
+**Bhavishya Verma**
+
+B.Tech – Computer Science and Engineering (Data Science)
+
+## 📄 License
+
+This project is developed for academic and educational purposes.
