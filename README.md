@@ -17,10 +17,10 @@ The **Tropical Cyclone Identification Project** focuses on identifying tropical 
 - **Programming Language:** Python
 - **Data Analysis:** Pandas, NumPy
 - **Data Visualization:** Matplotlib, Seaborn
-- **Machine Learning:** [Add the algorithms used]
+- **Machine Learning:**
 - **Development Environment:** Jupyter Notebook / Google Colab
 
-*Update this section according to the libraries and tools actually used in the project.*
+
 
 ## 📂 Project Structure
 
