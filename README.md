@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tropical Cyclone Intelligence (TCI)
 
 An AI/ML-Based Multi-Source Satellite Framework for Cyclone Identification, Classification and Prediction.
@@ -25,3 +26,6 @@ To run the entire system:
 1. Open `d:\Capstone\Project`.
 2. Double-click `run_app.bat`.
 3. Open browser at `http://localhost:5173`.
+=======
+# Tropical_Cyclone_Identification_Project
+>>>>>>> c2825ea88cee81e5a49d816527a1a076250c33d7
